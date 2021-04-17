@@ -1,0 +1,20 @@
+[[source]]
+url = "https://pypi.python.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+flit = "*"
+black = "*"
+coverage = "*"
+flake8 = "*"
+mccabe = "*"
+mypy = "*"
+pylint = "*"
+pytest = "*"
+tox = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.8"
