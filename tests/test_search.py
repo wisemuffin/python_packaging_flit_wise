@@ -1,10 +1,10 @@
 from unittest.mock import patch
 import pytest
-import podsearch
+import python_packaging_flit_wise
 
 
 def test_search():
-    with patch("podsearch.http.get") as mock:
+    with patch("python_packaging_flit_wise.http.get") as mock:
         mock.return_value = {
             "resultCount": 2,
             "results": [
@@ -37,7 +37,7 @@ def test_search():
             ],
         }
 
-        podcasts = podsearch.search("Python")
+        podcasts = python_packaging_flit_wise.search("Python")
         assert len(podcasts) == 2
         talkpython = podcasts[0]
         assert talkpython.id == 979020229
@@ -52,39 +52,39 @@ def test_search():
 
 
 def test_search_defaults():
-    with patch("podsearch.http.get") as mock:
-        podsearch.search("Python")
+    with patch("python_packaging_flit_wise.http.get") as mock:
+        python_packaging_flit_wise.search("Python")
         mock.assert_called_with(
-            url=podsearch.searcher.SEARCH_URL,
+            url=python_packaging_flit_wise.searcher.SEARCH_URL,
             params={"term": "Python", "country": "us", "limit": 5, "media": "podcast"},
         )
 
 
 def test_search_params():
-    with patch("podsearch.http.get") as mock:
-        podsearch.search("Python", country="us", limit=10)
+    with patch("python_packaging_flit_wise.http.get") as mock:
+        python_packaging_flit_wise.search("Python", country="us", limit=10)
         mock.assert_called_with(
-            url=podsearch.searcher.SEARCH_URL,
+            url=python_packaging_flit_wise.searcher.SEARCH_URL,
             params={"term": "Python", "country": "us", "limit": 10, "media": "podcast"},
         )
 
 
 def test_nothing_found():
-    with patch("podsearch.http.get") as mock:
+    with patch("python_packaging_flit_wise.http.get") as mock:
         mock.return_value = {"resultCount": 0, "results": []}
-        podcasts = podsearch.search("Python")
+        podcasts = python_packaging_flit_wise.search("Python")
         assert len(podcasts) == 0
 
 
 def test_failed():
-    with patch("podsearch.http.get") as mock:
+    with patch("python_packaging_flit_wise.http.get") as mock:
         mock.side_effect = Exception()
         with pytest.raises(Exception):
-            podsearch.search("Python")
+            python_packaging_flit_wise.search("Python")
 
 
 def test_parsing_failed():
-    with patch("podsearch.http.get") as mock:
+    with patch("python_packaging_flit_wise.http.get") as mock:
         mock.return_value = {
             "resultCount": 1,
             "results": [
@@ -92,4 +92,4 @@ def test_parsing_failed():
             ],
         }
         with pytest.raises(Exception):
-            podsearch.search("Python")
+            python_packaging_flit_wise.search("Python")

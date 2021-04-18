@@ -3,7 +3,7 @@
 
 coverage:  ## Run tests with coverage
 	python -m coverage erase
-	python -m coverage run --include=podsearch/* -m pytest -ra
+	python -m coverage run --include=python_packaging_flit_wise/* -m pytest -ra
 	python -m coverage report -m
 
 deps:  ## Install dependencies
@@ -11,9 +11,9 @@ deps:  ## Install dependencies
 	python -m pip install black coverage flake8 flit mccabe mypy pylint pytest tox tox-gh-actions
 
 lint:  ## Lint and static-check
-	python -m flake8 podsearch
-	python -m pylint podsearch
-	python -m mypy podsearch
+	python -m flake8 python_packaging_flit_wise
+	python -m pylint python_packaging_flit_wise
+	python -m mypy python_packaging_flit_wise
 
 publish:  ## Publish to PyPi
 	python -m flit publish

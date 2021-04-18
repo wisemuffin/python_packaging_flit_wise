@@ -1,10 +1,10 @@
 from unittest.mock import patch
 import pytest
-import podsearch
+import python_packaging_flit_wise
 
 
 def test_get():
-    with patch("podsearch.http.get") as mock:
+    with patch("python_packaging_flit_wise.http.get") as mock:
         mock.return_value = {
             "resultCount": 1,
             "results": [
@@ -24,8 +24,8 @@ def test_get():
             ],
         }
 
-        podcast = podsearch.get(979020229)
-        assert isinstance(podcast, podsearch.Podcast)
+        podcast = python_packaging_flit_wise.get(979020229)
+        assert isinstance(podcast, python_packaging_flit_wise.Podcast)
         assert podcast.id == 979020229
         assert podcast.name == "Talk Python To Me"
         assert podcast.author == "Michael Kennedy (@mkennedy)"
@@ -38,7 +38,7 @@ def test_get():
 
 
 def test_invalid_kind():
-    with patch("podsearch.http.get") as mock:
+    with patch("python_packaging_flit_wise.http.get") as mock:
         mock.return_value = {
             "resultCount": 1,
             "results": [
@@ -49,19 +49,19 @@ def test_invalid_kind():
                 }
             ],
         }
-        podcast = podsearch.get(1435797751)
+        podcast = python_packaging_flit_wise.get(1435797751)
         assert podcast is None
 
 
 def test_nothing_found():
-    with patch("podsearch.http.get") as mock:
+    with patch("python_packaging_flit_wise.http.get") as mock:
         mock.return_value = {"resultCount": 0, "results": []}
-        podcast = podsearch.get(979020229)
+        podcast = python_packaging_flit_wise.get(979020229)
         assert podcast is None
 
 
 def test_failed():
-    with patch("podsearch.http.get") as mock:
+    with patch("python_packaging_flit_wise.http.get") as mock:
         mock.side_effect = Exception()
         with pytest.raises(Exception):
-            podsearch.get(979020229)
+            python_packaging_flit_wise.get(979020229)

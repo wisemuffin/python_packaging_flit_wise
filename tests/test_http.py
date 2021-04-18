@@ -1,7 +1,7 @@
 from unittest.mock import patch
 from urllib.error import HTTPError, URLError
 import pytest
-from podsearch import http
+from python_packaging_flit_wise import http
 
 
 def test_get():
