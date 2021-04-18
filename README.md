@@ -3,15 +3,10 @@
 Testing out publishing packages with the help of this awesome dude https://github.com/nalgeon/podsearch-py
 [docs](https://antonz.org/python-packaging/)
 
-## errors
- Yaml not found, that's ok! Learn more at http://docs.codecov.io/docs/codecov-yaml
-
-https://docs.codecov.io/docs/codecov-yaml
-
 ## CICD
-[codecov](https://codecov.io/)
-[codeclimate](https://codeclimate.com/) 14 day trial
-[make file](https://antonz.org/makefile-automation/) - like javascripts scripts section in package.json
+- [codecov](https://codecov.io/)
+- [codeclimate](https://codeclimate.com/) 14 day trial
+- [make file](https://antonz.org/makefile-automation/) - like javascripts scripts section in package.json
 
 # Podcast searcher
 
