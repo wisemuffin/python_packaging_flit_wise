@@ -3,7 +3,7 @@ requires = ["flit_core >=2,<4"]
 build-backend = "flit_core.buildapi"
 
 [tool.flit.metadata]
-module = "podsearch"
+module = "python_packaging_flit_wise"
 author = "wisemuffin"
 author-email = "davidgg777@hotmail.com"
 home-page = "https://github.com/wisemuffin/podsearch-py"
