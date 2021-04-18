@@ -5,7 +5,7 @@ Testing out publishing packages with the help of this awesome dude https://githu
 
 ## errors
  Yaml not found, that's ok! Learn more at http://docs.codecov.io/docs/codecov-yaml
- 
+
 https://docs.codecov.io/docs/codecov-yaml
 
 ## CICD
@@ -99,9 +99,9 @@ Use [Black](https://black.readthedocs.io/en/stable/) for code formatting and [Co
 
 [pypi-image]: https://img.shields.io/pypi/v/python_packaging_flit_wise
 [pypi-url]: https://pypi.org/project/python_packaging_flit_wise/
-[build-image]: https://github.com/wisemuffin/python_packaging_flit_wise-py/actions/workflows/build.yml/badge.svg
-[build-url]: https://github.com/wisemuffin/python_packaging_flit_wise-py/actions/workflows/build.yml
-[coverage-image]: https://codecov.io/gh/wisemuffin/python_packaging_flit_wise-py/branch/main/graph/badge.svg
-[coverage-url]: https://codecov.io/gh/wisemuffin/python_packaging_flit_wise-py
+[build-image]: https://github.com/wisemuffin/python_packaging_flit_wise/actions/workflows/build.yml/badge.svg
+[build-url]: https://github.com/wisemuffin/python_packaging_flit_wise/actions/workflows/build.yml
+[coverage-image]: https://codecov.io/gh/wisemuffin/python_packaging_flit_wise/branch/main/graph/badge.svg
+[coverage-url]: https://codecov.io/gh/wisemuffin/python_packaging_flit_wise
 [quality-image]: https://api.codeclimate.com/v1/badges/3130fa0ba3b7993fbf0a/maintainability
-[quality-url]: https://codeclimate.com/github/wisemuffin/python_packaging_flit_wise-py
+[quality-url]: https://codeclimate.com/github/wisemuffin/python_packaging_flit_wise
