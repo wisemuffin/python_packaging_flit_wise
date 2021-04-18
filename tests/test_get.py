@@ -65,3 +65,8 @@ def test_failed():
         mock.side_effect = Exception()
         with pytest.raises(Exception):
             python_packaging_flit_wise.get(979020229)
+
+
+def test_to_fail():
+    x = 1
+    assert False

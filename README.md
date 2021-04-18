@@ -4,9 +4,9 @@ Testing out publishing packages with the help of this awesome dude https://githu
 [docs](https://antonz.org/python-packaging/)
 
 ## CICD
-[codecov](https://codecov.io/)
-[codeclimate](https://codeclimate.com/) 14 day trial
-[make file](https://antonz.org/makefile-automation/) - like javascripts scripts section in package.json
+- [codecov](https://codecov.io/)
+- [codeclimate](https://codeclimate.com/) 14 day trial
+- [make file](https://antonz.org/makefile-automation/) - like javascripts scripts section in package.json
 
 # Podcast searcher
 
