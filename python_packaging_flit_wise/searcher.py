@@ -6,7 +6,7 @@ for iTunes API Description.
 
 from dataclasses import dataclass
 from typing import List, Optional
-from python_packaging_flit_wise import http
+from podsearch import http
 
 BASE_URL = "https://itunes.apple.com"
 SEARCH_URL = f"{BASE_URL}/search"
